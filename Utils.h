@@ -15,8 +15,8 @@ class Utils {
   };
   static double calculateDistance(std::tuple<int, int> pos1,
                                   std::tuple<int, int> pos2) {
-    double distance = pow((get<0>(pos2) - get<0>(pos1)), 2) +
-                      pow((get<1>(pos2) - get<1>(pos1)), 2);
+    double distance = sqrt(pow((get<0>(pos2) - get<0>(pos1)), 2) +
+                      pow((get<1>(pos2) - get<1>(pos1)), 2));
     return distance;
   };
 };
