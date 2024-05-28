@@ -10,7 +10,6 @@ private:
     /* data */
 public:
     Mine(int x, int y): GameEntity(x, y,'M'){};
-    ~Mine(){};
    Explosion explode(){
     setType('X');
     return Explosion(get<0>(getPos()),get<1>(getPos()));

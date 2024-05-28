@@ -9,7 +9,6 @@ private:
     /* data */
 public:
     Ship(int x, int y): GameEntity(x, y,'S'){};
-    ~Ship(){};
      void move(int dx, int dy){
         setPos(get<0>(getPos()) + dx, get<1>(getPos()) + dy);}
      

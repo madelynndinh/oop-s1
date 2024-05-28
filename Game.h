@@ -23,12 +23,7 @@ class Game {
         int maxIterations;
         double mineDistanceThreshold;
  public:
-  Game(/* args */);
-  ~Game() {
-    for (auto entity : entities) {
-      delete entity;
-    }
-    entities.clear();}
+  Game(/* args */){};
 
   std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth,
                                     int gridHeight) {
@@ -57,7 +52,7 @@ class Game {
             if (Utils::calculateDistance(entities[i]->getPos(),entities[j]->getPos()) < mineDistanceThreshold)
             {
               Explosion explosion = dynamic_cast<Mine*>(entities[j])->explode();
-              explosion.apply(entities[i]);
+              explosion.apply(*entities[i]);
             }
         }
       }

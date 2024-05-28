@@ -2,7 +2,7 @@
 #define GAMEENTITY_H
 #include <iostream>
 #include <tuple>
-#include "Explosion.h"
+
 using namespace std;
 class GameEntity
 {
@@ -14,7 +14,8 @@ public:
 GameEntity(int x, int y,char type)
 {   this->position = std::make_tuple(x,y);
     this->type =type ;};
-    virtual ~GameEntity();
+
+ virtual ~GameEntity(){};
 
     void setPos(int x, int y)
     {

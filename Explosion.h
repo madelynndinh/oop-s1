@@ -11,7 +11,6 @@ private:
     /* data */
 public:
     Explosion(int x,int y):GameEntity(x,y,'E'){};
-    ~Explosion(){};
     void apply(GameEntity& entity) override
     {
         entity=GameEntity(-1,-1,'X');

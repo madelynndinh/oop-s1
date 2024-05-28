@@ -8,8 +8,7 @@ class Utils {
  private:
   /* data */
  public:
-  Utils(/* args */);
-  ~Utils();
+  Utils(/* args */){};
   static std::tuple<int, int> generateRandomPos(int gridWidth, int gridHeight) {
     std::tuple<int, int> pos = {rand() % gridWidth, rand() % gridHeight};
     return pos;
