@@ -24,7 +24,7 @@ class Game {
         double mineDistanceThreshold;
  public:
   Game(/* args */){};
-
+std::vector<GameEntity*> getEntities(){return entities;}
   std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth,
                                     int gridHeight) {
     entities.clear();

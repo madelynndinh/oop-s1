@@ -2,7 +2,7 @@
 #define UTILS_H
 #include <iostream>
 #include <tuple>
-
+#include <cmath>
 using namespace std;
 class Utils {
  private:
