@@ -28,7 +28,7 @@ GameEntity(int x, int y,char type)
     }; //Returns the position of the entity.
     void setType(char type)
     {
-        type = type;
+        this->type = type;
     };
 char getType() //Returns the type of the entity.
 {

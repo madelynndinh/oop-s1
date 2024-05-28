@@ -39,6 +39,7 @@ std::vector<GameEntity*> get_entities(){return entities;}
 
     return entities;
   };
+
   void gameLoop(int maxIterations, double mineDistanceThreshold) {
     int i = 0;
     while (i<maxIterations)
@@ -48,9 +49,8 @@ std::vector<GameEntity*> get_entities(){return entities;}
         dynamic_cast<Ship*>(entities[i])->move(0, 1);
         for (int j = 0; j < entities.size(); j++) {
           if (entities[j]->getType() == 'M')
-          entities[j]=dynamic_cast<Mine*>(entities[j]);
             if (Utils::calculateDistance(entities[i]->getPos(),entities[j]->getPos()) < mineDistanceThreshold)
-            {
+            { 
               Explosion explosion = dynamic_cast<Mine*>(entities[j])->explode();
               explosion.apply(*entities[i]);
             }
@@ -63,7 +63,7 @@ std::vector<GameEntity*> get_entities(){return entities;}
         ship_destroyed = false;
         break;}
       if (ship_destroyed==true)
-      {
+      { 
         break;
       }
     }
